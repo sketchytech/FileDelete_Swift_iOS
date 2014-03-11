@@ -1,7 +1,7 @@
 FileDelete
 ==========
 
-Simple class to delete files and subdirectories from the Documents and Library directories.
+Simple iOS class to delete files and subdirectories from the Documents and Library directories.
 
 To use this code import the header where it is needed and use the following methods:
 
