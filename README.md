@@ -21,6 +21,7 @@ To use this code import the header where it is needed and use the following meth
     FileDelete.deleteFileFromTemporaryDirectory("YourFile.extension",subdirectory:"YourDirectory")
     FileDelete.deleteFileFromCachesDirectory("YourFile.extension",subdirectory:"YourDirectory")
     
+    // Delete folders
     FileDelete.deleteSubDirectoryFromDocumentsDirectory("YourDirectory")
     FileDelete.deleteSubDirectoryFromLibraryDirectory("YourDirectory")
     FileDelete.deleteSubDirectoryFromApplicationSupportDirectory("YourDirectory")
