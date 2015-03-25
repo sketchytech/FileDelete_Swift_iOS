@@ -13,7 +13,7 @@ Simple iOS class to delete files and subdirectories.
     FileDelete.deleteSubDirectoryFromTemporaryDirectory(subdirectory:String) -> Bool
 
 See companion class: [FileSave](https://github.com/sketchytech/FileSave)
-##Objective-C implementation (no long updated)
+##Objective-C implementation (no longer updated)
 To use this code import the header where it is needed and use the following methods:
 
 
