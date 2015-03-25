@@ -43,7 +43,7 @@ struct FileDelete {
         if error != nil {
             println(error)
         }
-        // Return status of file save
+        // Return status of file delete
         return ok;
         
     }
@@ -59,7 +59,7 @@ struct FileDelete {
         }
         
         // Create generic beginning to file delete path
-        // Create generic beginning to file load path
+
         var deletePath = ""
         
         if let direct = self.applicationTemporaryDirectory(),
@@ -84,8 +84,8 @@ struct FileDelete {
         if error != nil {
             println(error)
         }
-        // Return status of file save
-        return ok;
+        // Return status of file delete
+        return ok
     }
     
     
@@ -117,9 +117,6 @@ struct FileDelete {
         if dirExists == false {
             return false
         }
-
-        
-        
         
         
         // Delete the file and see if it was successful
@@ -130,7 +127,7 @@ struct FileDelete {
         if error != nil {
             println(error)
         }
-        // Return status of file save
+        // Return status of file delete
         return ok
         
     }
@@ -138,13 +135,11 @@ struct FileDelete {
     
     
     
-    static func deleteSubDirectoryFromTemporaryDirectory(subdirectory:String?) -> Bool
+    static func deleteSubDirectoryFromTemporaryDirectory(subdirectory:String) -> Bool
     {
         // Remove unnecessary slash if need
-        var subDir:String?
-        if let sub = subdirectory {
-            subDir = stripSlashIfNeeded(sub)
-        }
+        var subDir = stripSlashIfNeeded(subdirectory)
+        
         // Create generic beginning to file delete path
         var deletePath = ""
         
@@ -153,10 +148,10 @@ struct FileDelete {
                 deletePath = path + "/"
         }
         
-        if let sub = subDir {
-            deletePath += sub
-            deletePath += "/"
-        }
+        
+        deletePath += subDir
+        deletePath += "/"
+        
         
         var dir:ObjCBool = true
         let dirExists = NSFileManager.defaultManager().fileExistsAtPath(deletePath, isDirectory:&dir)
@@ -168,16 +163,15 @@ struct FileDelete {
         }
         
         
-        
         // Delete the file and see if it was successful
         var error:NSError?
-        var ok:Bool = NSFileManager.defaultManager().removeItemAtPath(deletePath, error: &error)
+        let ok:Bool = NSFileManager.defaultManager().removeItemAtPath(deletePath, error: &error)
         
         
         if error != nil {
             println(error)
         }
-        // Return status of file save
+        // Return status of file delete
         return ok
         
     }
