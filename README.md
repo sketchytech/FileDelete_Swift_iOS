@@ -3,7 +3,7 @@ FileDelete
 
 Simple iOS class to delete files and subdirectories.
 
-Note: If you are working with Swift, it is recommended that you use [SwiftFiles](https://github.com/sketchytech/SwiftFiles), which combines FileDelete with FileSave and FileLoad.
+Note: If you are working with Swift, it is recommended that you use [SwiftFiles](https://github.com/sketchytech/SwiftFiles), which combines FileDelete with FileSave and FileLoad. (SwiftFiles has a [Swift 2 compatible branch](https://github.com/sketchytech/SwiftFiles/tree/Swift_2).)
 
 ##Swift 1.2 (Xcode 6.3 beta 4) version methods:
 
